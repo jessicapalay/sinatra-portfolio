@@ -1,0 +1,316 @@
+/*****************************************************************************/
+/*
+/* Common
+/*
+/*****************************************************************************/
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Mission Gothic";
+  font-style: italic;
+  font-weight: bold;
+  src: url('/assets/fonts/Mission Gothic Bold Italic.otf');
+}
+
+@font-face {
+  font-family: "Mission Gothic";
+  src: url('/assets/fonts/Mission Gothic Regular.otf');
+}
+
+@font-face {
+  font-family: "Mission Gothic Thin";
+  src: url('/assets/fonts/Mission Gothic Thin.otf');
+}
+
+@font-face {
+  font-family: "Mission Gothic";
+  font-weight: bold;
+  src: url('/assets/fonts/Mission Gothic Bold.oft');
+}
+
+html, body { height: 100%; }
+
+body {
+  background-color: #FFF;
+  font: 13.34px Helvetica, Arial, sans-serif;
+  font-size: small;
+  text-align: center;
+  padding: 2em;
+  background: url("/assets/images/absurdidad.png");
+}
+
+h1 {
+  font-size: 84px;
+  margin: 1Sem 0 0.5em;
+  font-family: "Mission Gothic";
+  font-weight: bold;
+  font-style: italic;
+}
+
+
+p { margin: 1em 0; }
+
+.navigation {
+  margin: 25% 0 1% 0;
+}
+
+.navigation a {
+  font-family: "Mission Gothic Thin";
+  font-size: 20px;
+  color: #000000;
+  text-transform: uppercase;
+  width: 300px;
+  display: inline-block;
+  padding: 0.5em 0;
+  border-style: solid;
+  border-width: 2px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navigation-1 {
+  display: none;
+}
+
+.navigation-1 a {
+  font-family: "Mission Gothic Thin";
+  font-size: 20px;
+  color: #000000;
+  text-transform: uppercase;
+  width: 300px;
+  display: inline-block;
+  padding: 0.5em 0;
+  border-style: solid;
+  border-width: 2px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.about-page, .work-page, .contact-page {
+  display: none;
+  padding-bottom: 10em;
+}
+
+.about-page p, .work-page p, .contact-page p {
+  font-family: "Mission Gothic Thin";
+  font-size: 20px;
+  width: 800px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.about-page h1, .work-page h1, .contact-page h1 {
+  margin: 0.5em 0 0.75em;
+}
+
+.applink {
+  text-decoration: none;
+  color: black;
+  font-family: "Mission Gothic";
+  font-weight: bold;
+  font-size: 24px;
+  text-shadow: 2px 2px #668375;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  width: 300px;
+  padding: 21px;
+  text-transform: uppercase;
+  margin-top: 20px;
+ }
+
+
+form {
+  display: block;
+  margin: 0px auto;
+  width: 440px;
+  padding-top: 40px;
+  position: relative;
+}
+
+fieldset {
+  margin: 0px;
+  padding: 1em;
+  border: 1px;
+  outline: 0px;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+input, textarea {
+  transition: all 300ms;
+  width: 400px;
+  padding: 20px;
+  border: 1px solid rgb(209, 209, 209);
+  border-radius: 5px;
+  font: 14px, Arial, sans-serif;
+  color: rgb(153, 153, 153);
+  display: block;
+  margin-top: 20px;
+  box-shadow: rgb(225, 225, 225) 0px 1px 0px 0px inset;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  text-align: start;
+}
+
+textarea {
+  min-width: 400px;
+  max-width: 400px;
+  overflow: hidden;
+  height: 15px;
+  background-color: white;
+  flex-direction: column;
+  resize: auto;
+  cursor: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+input, input[type="password"], input[type="search"] {
+  background-color: white;
+}
+
+.errormessage {
+  display: block;
+  font: 14px, Arial, sans-serif;
+  color: rgb(153, 153, 153);
+  margin-top: 20px;
+}
+
+form .submit {
+  background: rgb(63, 133, 119);
+  font: 14px, Arial, sans-serif;
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  width: 400px;
+  padding: 21px;
+  text-transform: uppercase;
+  margin-top: 20px;
+  border-bottom: 2px solid rgb(5, 82, 70);
+}
+
+a .submit {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+form div .sucess {
+  border: 1px solid rgb(209, 209, 209);
+  padding-top: 60px;
+  position: absolute;
+  top: 40px;
+  width: 360px;
+  left: 50%;
+  padding-bottom: 50px;
+  margin-left: -180px;
+  opacity: 0;
+  z-index: -1;
+}
+
+.work-page.container {
+  margin: 0;
+  padding: 0;
+  width: 800px;
+  list-style: none;
+}
+
+.project {
+  width: 400px;
+  display: inline-block;
+  margin: 20px 20px 0;
+}
+
+.project-image {
+  display: block;
+  width: 100%;
+  height: 212px;
+  background-position: center;
+  background-size: cover;
+  -webkit-filter: grayscale(100%);
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.project-image:hover {
+  -webkit-filter: grayscale(0%);
+}
+
+#img1 {
+  background-image: url("/assets/images/Bloccit Photo Small.png");
+}
+
+#img2 {
+  background-image: url("/assets/images/VeggieOut Photo Small.png");
+}
+
+
+
+
+//experimentation with circle growth
+
+.project-not-used {
+  width: 400px;
+  display: inline-block;
+  -webkit-transition: All 0.5s ease;
+  -moz-transition: All 0.5s ease;
+  -o-transition: All 0.5s ease;
+  -ms-transition: All 0.5s ease;
+  transition: All 0.5s ease;
+}
+
+#circle-resting1 {
+  display: block;
+  width: 100px;
+  height: 100px;
+  background: red;
+  -webkit-transition: All 0.5s ease;
+  -moz-transition: All 0.5s ease;
+  -o-transition: All 0.5s ease;
+  -ms-transition: All 0.5s ease;
+  transition: All 0.5s ease;
+  border-radius: 50px;
+  margin-left: 147px;
+  overflow: hidden;
+}
+
+#circle-resting2 {
+  display: block;
+  width: 100px;
+  height: 100px;
+  background: blue;
+  -webkit-transition: All 0.5s ease;
+  -moz-transition: All 0.5s ease;
+  -o-transition: All 0.5s ease;
+  -ms-transition: All 0.5s ease;
+  transition: All 0.5s ease;
+  border-radius: 50px;
+  margin-left: 147px;
+  overflow: hidden;
+}
+
+#circle-resting1:hover {
+  width: 200px;
+  height: 200px;
+  border-radius: 200px;
+}
+
+#circle-resting2:hover {
+  width: 200px;
+  height: 200px;
+  border-radius: 200px;
+}
