@@ -63,13 +63,13 @@
             <div class="contact-page">
               <h1>Want to get in touch?</h1>
               <p>Send me an email and I will get back to you.</p>
-              <form action="?contact" method="post" class="ajax">
+              <form action="/emails" method="post" class="ajax">
                 <fieldset>
-                    <input type="text" name="nome" placeholder="NAME" class="required">
+                    <input type="text" name="name" placeholder="NAME" class="required">
                     <input type="email" name="email" placeholder="EMAIL" class="required[email]">
                     <textarea name="message" placeholder="MESSAGE" class="required"></textarea>
                     <div class="errormessage"></div>
-                    <a class="submit">Send</a>
+                    <input type="submit" value="Send" class="submit">
                 </fieldset>
                 </form>
             </div>
