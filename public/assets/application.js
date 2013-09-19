@@ -21,3 +21,12 @@ $(document).ready(function() {
 	});
 });
 
+
+$(document).ready(function() {
+     $('input[type="submit"]').attr('disabled','disabled');
+     $('input[type="text"], input[type="email"], #message').keyup(function() {
+        if($(this).val() != '') {
+           $('input[type="submit"]').removeAttr('disabled');
+        }
+     });
+ });
